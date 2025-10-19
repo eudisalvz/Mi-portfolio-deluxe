@@ -1,20 +1,14 @@
-import { X, Linkedin, Send, MessageCircle, ArrowUpRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white font-mono p-8 md:p-12 lg:p-16">
-      <div className="max-w-2xl">
+      <div className="max-w-[400px]">
         {/* Profile Section */}
         <div className="mb-12">
-          <div className="w-16 h-16 mb-6 rounded-lg overflow-hidden bg-white">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Eudis_alvarez_pb-NDp7rOptytQzzSS4MOBResT0w1G0Ki.png"
-              alt="Eudis Alvarez"
-              width={64}
-              height={64}
-              className="w-full h-full object-cover"
-            />
+          <div className="w-9 h-9 mb-6 rounded-lg overflow-hidden bg-white">
+            <Image src="/pfp.png" alt="Eudis Alvarez" width={36} height={36} className="w-full h-full object-cover" />
           </div>
 
           <h1 className="text-xs font-normal mb-2 tracking-wide">EUDIS ALVAREZ</h1>
@@ -27,28 +21,28 @@ export default function PortfolioPage() {
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="X (Twitter)"
             >
-              <X className="w-4 h-4" />
+              <Image src="/icons/x.svg" alt="X" width={16} height={16} />
             </a>
             <a
               href="#"
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-4 h-4" />
+              <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} />
             </a>
             <a
               href="#"
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="Telegram"
             >
-              <Send className="w-4 h-4" />
+              <Image src="/icons/telegram.svg" alt="Telegram" width={16} height={16} />
             </a>
             <a
               href="#"
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="WhatsApp"
             >
-              <MessageCircle className="w-4 h-4" />
+              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} />
             </a>
           </div>
         </div>
