@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white font-mono p-8 md:p-12 lg:p-16">
+    <div className="min-h-screen text-white font-mono p-8 md:p-12 lg:p-16" style={{ backgroundColor: "#0a0a0a" }}>
       <div className="max-w-[400px]">
         {/* Profile Section */}
         <div className="mb-12">
