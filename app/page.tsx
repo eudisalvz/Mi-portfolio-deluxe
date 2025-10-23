@@ -17,28 +17,36 @@ export default function PortfolioPage() {
           {/* Social Icons */}
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://x.com/eudisalvz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="X (Twitter)"
             >
               <Image src="/icons/x.svg" alt="X" width={16} height={16} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/eudis/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="LinkedIn"
             >
               <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} />
             </a>
             <a
-              href="#"
+              href="https://t.me/eudisalvz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="Telegram"
             >
               <Image src="/icons/telegram.svg" alt="Telegram" width={16} height={16} />
             </a>
             <a
-              href="#"
+              href="https://wa.me/message/52SBST7NINAPI1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
               aria-label="WhatsApp"
             >
