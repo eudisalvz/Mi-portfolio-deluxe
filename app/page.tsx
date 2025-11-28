@@ -1,3 +1,5 @@
+"use client"
+
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 
@@ -58,10 +60,18 @@ export default function PortfolioPage() {
         {/* About Section */}
         <section className="mb-12">
           <h2 className="text-xs font-normal mb-4 tracking-wide">ABOUT</h2>
-          <p className="text-[#9e9e9e] text-xs leading-relaxed">
+          <p className="text-[#9e9e9e] text-xs leading-relaxed mb-3">
             I'M A WEB AND MOBILE APPS DESIGNER. I CARE ABOUT MAKING DIGITAL EXPERIENCES EASY, USEFUL, AND NICE TO LOOK
             AT.
           </p>
+          <a
+            href="https://extended-branding-038566.framer.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors"
+          >
+            VIEW SHOWCASE
+          </a>
         </section>
 
         {/* Interests Section */}
