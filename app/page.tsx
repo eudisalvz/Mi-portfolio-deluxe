@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function PortfolioPage() {
   return (
@@ -16,7 +17,68 @@ export default function PortfolioPage() {
           <h1 className="text-xs font-normal mb-2 tracking-wide">EUDIS ALVAREZ</h1>
           <p className="text-[#9e9e9e] text-xs mb-6">VENEZUELA</p>
 
-          {/* Social Icons */}
+          <div className="flex gap-4 mb-6">
+            <a
+              href="https://extended-branding-038566.framer.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors"
+            >
+              GALLERY
+            </a>
+            <span className="text-[#9e9e9e] text-xs">—</span>
+            <Link href="/projects" className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors">
+              PROJECTS
+            </Link>
+          </div>
+        </div>
+
+        {/* About Section */}
+        <section className="mb-12">
+          <h2 className="text-xs font-normal mb-4 tracking-wide">ABOUT</h2>
+          <p className="text-[#9e9e9e] text-xs leading-relaxed">
+            I'M A WEB AND MOBILE APPS DESIGNER. I CARE ABOUT MAKING DIGITAL EXPERIENCES EASY, USEFUL, AND NICE TO LOOK
+            AT.
+          </p>
+        </section>
+
+        {/* Interests Section */}
+        <section className="mb-12">
+          <h2 className="text-xs font-normal mb-4 tracking-wide">INTERESTS</h2>
+          <p className="text-[#9e9e9e] text-xs">GYM, TECH, AND GAMING.</p>
+        </section>
+
+        {/* Crafting Section */}
+        <section className="mb-12">
+          <h2 className="text-xs font-normal mb-4 tracking-wide">CRAFTING</h2>
+          <div className="space-y-4">
+            <a
+              href="#"
+              className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
+            >
+              <span className="text-xs">CARDVERSE</span>
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+            <a
+              href="#"
+              className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
+            >
+              <span className="text-xs">ALAMO ALGORITHMICS</span>
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          </div>
+        </section>
+
+        {/* Connect Section */}
+        <section>
+          <h2 className="text-xs font-normal mb-4 tracking-wide">CONNECT</h2>
+          <a
+            href="mailto:eudis.vah@gmail.com"
+            className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors mb-6 block"
+          >
+            EUDIS.VAH@GMAIL.COM
+          </a>
+
           <div className="flex gap-4">
             <a
               href="https://x.com/eudisalvz"
@@ -55,75 +117,6 @@ export default function PortfolioPage() {
               <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} />
             </a>
           </div>
-        </div>
-
-        {/* About Section */}
-        <section className="mb-12">
-          <h2 className="text-xs font-normal mb-4 tracking-wide">ABOUT</h2>
-          <p className="text-[#9e9e9e] text-xs leading-relaxed mb-3">
-            I'M A WEB AND MOBILE APPS DESIGNER. I CARE ABOUT MAKING DIGITAL EXPERIENCES EASY, USEFUL, AND NICE TO LOOK
-            AT.
-          </p>
-          <a
-            href="https://extended-branding-038566.framer.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors"
-          >
-            VIEW SHOWCASE
-          </a>
-        </section>
-
-        {/* Interests Section */}
-        <section className="mb-12">
-          <h2 className="text-xs font-normal mb-4 tracking-wide">INTERESTS</h2>
-          <p className="text-[#9e9e9e] text-xs">GYM, TECH, AND GAMING.</p>
-        </section>
-
-        {/* Crafting Section */}
-        <section className="mb-12">
-          <h2 className="text-xs font-normal mb-6 tracking-wide">CRAFTING</h2>
-          <div className="space-y-4">
-            <a
-              href="#"
-              className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
-            >
-              <span className="text-xs">CARDVERSE</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-            <a
-              href="#"
-              className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
-            >
-              <span className="text-xs">ALAMO ALGORITHMICS</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-            <a
-              href="#"
-              className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
-            >
-              <span className="text-xs">DEPENDS ON THE WEATHER</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-            <a
-              href="#"
-              className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
-            >
-              <span className="text-xs">DECISION POINT WEATHER</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-          </div>
-        </section>
-
-        {/* Connect Section */}
-        <section>
-          <h2 className="text-xs font-normal mb-4 tracking-wide">CONNECT</h2>
-          <a
-            href="mailto:eudis.vah@gmail.com"
-            className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors"
-          >
-            EUDIS.VAH@GMAIL.COM
-          </a>
         </section>
       </div>
     </div>
