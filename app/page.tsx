@@ -15,7 +15,7 @@ export default function PortfolioPage() {
           </div>
 
           <h1 className="text-xs font-normal mb-2 tracking-wide">EUDIS ALVAREZ</h1>
-          <p className="text-[#9e9e9e] text-xs mb-6">VENEZUELA</p>
+          <p className="text-[#9e9e9e] text-xs mb-6">UI/UX DESIGNER</p>
 
           <div className="flex gap-4 mb-6">
             <a
