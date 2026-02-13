@@ -45,7 +45,7 @@ export default function PortfolioPage() {
         {/* Interests Section */}
         <section className="mb-12">
           <h2 className="text-xs font-normal mb-4 tracking-wide">INTERESTS</h2>
-          <p className="text-[#9e9e9e] text-xs">GYM, TECH, AND GAMING.</p>
+          <p className="text-[#9e9e9e] text-xs">GYM, PHOTOGRAPHY, TECH AND GAMING.</p>
         </section>
 
         {/* Crafting Section */}
@@ -53,14 +53,18 @@ export default function PortfolioPage() {
           <h2 className="text-xs font-normal mb-4 tracking-wide">CRAFTING</h2>
           <div className="space-y-4">
             <a
-              href="#"
+              href="https://www.cardverse.io/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
             >
               <span className="text-xs">CARDVERSE</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
             <a
-              href="#"
+              href="https://www.alamoalgorithmics.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
             >
               <span className="text-xs">ALAMO ALGORITHMICS</span>
