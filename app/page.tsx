@@ -128,15 +128,15 @@ export default function PortfolioPage() {
       </div>
 
       {/* Desktop Layout - Hidden on mobile */}
-      <div className="hidden md:flex min-h-screen">
+      <div className="hidden md:flex h-screen overflow-hidden">
         {/* Left Side - Image */}
-        <div className="p-8 flex justify-center w-2/5 flex-col items-start px-0 py-0 my-[50px] mx-[50px]">
-          <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden bg-gray-400">
+        <div className="w-2/5 flex items-center justify-center p-12 px-12">
+          <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-400">
             <Image 
               src="/pfp.png" 
               alt="Eudis Alvarez" 
-              width={400} 
-              height={600} 
+              width={600} 
+              height={800}
               className="w-full h-full object-cover"
               priority
             />
@@ -144,9 +144,9 @@ export default function PortfolioPage() {
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-3/5 p-8 lg:p-16 flex flex-col lg:px-[50px] lg:py-[50px] lg:pl-0 justify-between">
+        <div className="w-3/5 px-12 flex flex-col justify-between overflow-hidden py-12">
           {/* Header Navigation */}
-          <div className="flex items-center justify-between mb-16">
+          <div className="flex items-center justify-between flex-shrink-0">
             <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
             <nav className="flex gap-8">
               <Link href="/" className="text-xs tracking-wide hover:text-[#9e9e9e] transition-colors">
@@ -167,26 +167,25 @@ export default function PortfolioPage() {
           </div>
 
           {/* Content Sections */}
-          <div className="overflow-y-auto text-left">
+          <div className="flex-1 overflow-hidden flex text-left flex-col items-stretch justify-end my-0 gap-[30px]">
             {/* About Section */}
-            <section className="mb-12">
-              <h2 className="text-xs font-normal mb-4 tracking-wide">ABOUT</h2>
-              <p className="text-[#9e9e9e] text-xs leading-relaxed max-w-lg">
-                I'M A WEB AND MOBILE APPS DESIGNER. I CARE ABOUT MAKING DIGITAL EXPERIENCES EASY, USEFUL, AND NICE TO LOOK
-                AT.
+            <section className="flex-shrink-0">
+              <h2 className="text-xs font-normal mb-2 tracking-wide">ABOUT</h2>
+              <p className="text-[#9e9e9e] text-xs leading-tight max-w-lg">
+                I'M A WEB AND MOBILE APPS DESIGNER. I CARE ABOUT MAKING DIGITAL EXPERIENCES EASY, USEFUL, AND NICE TO LOOK AT.
               </p>
             </section>
 
             {/* Interests Section */}
-            <section className="mb-12">
-              <h2 className="text-xs font-normal mb-4 tracking-wide">INTERESTS</h2>
+            <section className="flex-shrink-0">
+              <h2 className="text-xs font-normal mb-2 tracking-wide">INTERESTS</h2>
               <p className="text-[#9e9e9e] text-xs">GYM, PHOTOGRAPHY, TECH AND GAMING.</p>
             </section>
 
             {/* Crafting Section */}
-            <section className="mb-12">
-              <h2 className="text-xs font-normal mb-4 tracking-wide">CRAFTING</h2>
-              <div className="space-y-4">
+            <section className="flex-shrink-0">
+              <h2 className="text-xs font-normal mb-2 tracking-wide">CRAFTING</h2>
+              <div className="space-y-2">
                 <a
                   href="https://www.cardverse.io/"
                   target="_blank"
@@ -194,7 +193,7 @@ export default function PortfolioPage() {
                   className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group max-w-lg"
                 >
                   <span className="text-xs">CARDVERSE</span>
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
                 <a
                   href="https://www.alamoalgorithmics.com/"
@@ -203,22 +202,22 @@ export default function PortfolioPage() {
                   className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group max-w-lg"
                 >
                   <span className="text-xs">ALAMO ALGORITHMICS</span>
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </section>
 
             {/* Connect Section */}
-            <section>
-              <h2 className="text-xs font-normal mb-4 tracking-wide">CONNECT</h2>
+            <section className="flex-shrink-0">
+              <h2 className="text-xs font-normal mb-2 tracking-wide">CONNECT</h2>
               <a
                 href="mailto:eudis.vah@gmail.com"
-                className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors mb-6 block"
+                className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors mb-3 block"
               >
                 EUDIS.VAH@GMAIL.COM
               </a>
 
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 <a
                   href="https://x.com/eudisalvz"
                   target="_blank"
