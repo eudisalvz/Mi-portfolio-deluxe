@@ -135,7 +135,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Content Sections */}
-          <div className="text-left flex-1 overflow-hidden flex flex-col justify-between">
+          <div className="text-left flex-1 overflow-hidden flex flex-col justify-between gap-0">
             {/* Projects Section */}
             <section className="flex-shrink-0">
               <h2 className="text-xs font-normal mb-2 tracking-wide">PROJECTS</h2>
