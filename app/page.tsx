@@ -144,7 +144,7 @@ export default function PortfolioPage() {
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-3/5 p-8 lg:p-16 flex flex-col lg:px-[50px] lg:py-[50px] lg:pl-0">
+        <div className="w-3/5 p-8 lg:p-16 flex flex-col lg:px-[50px] lg:py-[50px] lg:pl-0 justify-between">
           {/* Header Navigation */}
           <div className="flex items-center justify-between mb-16">
             <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
           </div>
 
           {/* Content Sections */}
-          <div className="flex-1 overflow-y-auto text-left my-0">
+          <div className="overflow-y-auto text-left">
             {/* About Section */}
             <section className="mb-12">
               <h2 className="text-xs font-normal mb-4 tracking-wide">ABOUT</h2>
