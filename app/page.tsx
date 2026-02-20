@@ -3,8 +3,10 @@
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function PortfolioPage() {
+  const pathname = usePathname()
   return (
     <div className="min-h-screen text-white font-mono" style={{ backgroundColor: "#0a0a0a" }}>
       {/* Mobile Layout - Hidden on desktop */}
@@ -149,18 +151,18 @@ export default function PortfolioPage() {
           <div className="flex items-center justify-between flex-shrink-0">
             <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
             <nav className="flex gap-8">
-              <Link href="/" className="text-xs tracking-wide hover:text-[#9e9e9e] transition-colors">
+              <Link href="/" className={`text-xs tracking-wide transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 HOME
               </Link>
               <a 
                 href="https://extended-branding-038566.framer.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-xs tracking-wide hover:text-[#9e9e9e] transition-colors"
+                className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}
               >
                 GALLERY
               </a>
-              <Link href="/projects" className="text-xs tracking-wide hover:text-[#9e9e9e] transition-colors">
+              <Link href="/projects" className={`text-xs tracking-wide transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 PROJECTS
               </Link>
             </nav>
