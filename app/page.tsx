@@ -130,7 +130,7 @@ export default function PortfolioPage() {
       {/* Desktop Layout - Hidden on mobile */}
       <div className="hidden md:flex min-h-screen">
         {/* Left Side - Image */}
-        <div className="w-2/5 p-8 flex flex-col items-start justify-center">
+        <div className="p-8 flex justify-center w-2/5 flex-col px-[50] py-[50px] items-start">
           <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden bg-gray-400">
             <Image 
               src="/pfp.png" 
@@ -144,7 +144,7 @@ export default function PortfolioPage() {
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-3/5 p-8 lg:p-16 flex flex-col">
+        <div className="w-3/5 p-8 lg:p-16 flex flex-col lg:px-[50px] lg:py-[50px]">
           {/* Header Navigation */}
           <div className="flex items-center justify-between mb-16">
             <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
           </div>
 
           {/* Content Sections */}
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto text-left">
             {/* About Section */}
             <section className="mb-12">
               <h2 className="text-xs font-normal mb-4 tracking-wide">ABOUT</h2>
