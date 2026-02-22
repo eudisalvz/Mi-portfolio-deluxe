@@ -192,7 +192,7 @@ export default function PortfolioPage() {
                   href="https://www.cardverse.io/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group max-w-lg"
+                  className="flex items-center text-[#9e9e9e] hover:text-white transition-colors group max-w-lg justify-start gap-2.5"
                 >
                   <span className="text-xs">CARDVERSE</span>
                   <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -201,7 +201,7 @@ export default function PortfolioPage() {
                   href="https://www.alamoalgorithmics.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group max-w-lg"
+                  className="flex items-center text-[#9e9e9e] hover:text-white transition-colors group max-w-lg justify-start gap-2.5"
                 >
                   <span className="text-xs">ALAMO ALGORITHMICS</span>
                   <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
