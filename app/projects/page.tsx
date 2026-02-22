@@ -112,7 +112,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-3/5 px-12 py-8 flex flex-col justify-end overflow-hidden">
+        <div className="w-3/5 px-12 flex flex-col justify-end overflow-hidden py-12">
           {/* Header Navigation */}
           <div className="flex items-center justify-between flex-shrink-0">
             <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
