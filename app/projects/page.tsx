@@ -134,24 +134,25 @@ export default function ProjectsPage() {
             </nav>
           </div>
 
-          {/* Content Sections */}
-          <div className="text-left flex-1 overflow-hidden flex flex-col justify-between gap-0">
-            {/* Projects Section */}
-            <section className="flex-shrink-0">
-              <h2 className="text-xs font-normal mb-2 tracking-wide">PROJECTS</h2>
-              <div className="space-y-2">
-                {projects.map((project) => (
-                  <div key={project.name} className="flex items-center justify-between max-w-lg">
-                    <span className="text-[#9e9e9e] text-xs">{project.name}</span>
-                    <div className="flex-1 mx-3 border-b border-dashed border-[#9e9e9e]"></div>
-                    <span className="text-[#9e9e9e] text-xs whitespace-nowrap">{project.year}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
+          {/* Content Sections - Grouped at bottom */}
+          <div className="flex-1 flex flex-col justify-end">
+            <div className="text-left flex-shrink-0">
+              {/* Projects Section */}
+              <section className="mb-8">
+                <h2 className="text-xs font-normal mb-2 tracking-wide">PROJECTS</h2>
+                <div className="space-y-2">
+                  {projects.map((project) => (
+                    <div key={project.name} className="flex items-center justify-between max-w-lg">
+                      <span className="text-[#9e9e9e] text-xs">{project.name}</span>
+                      <div className="flex-1 mx-3 border-b border-dashed border-[#9e9e9e]"></div>
+                      <span className="text-[#9e9e9e] text-xs whitespace-nowrap">{project.year}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
 
-            {/* Connect Section */}
-            <section className="flex-shrink-0 mt-auto">
+              {/* Connect Section */}
+              <section className="flex-shrink-0">
               <h2 className="text-xs font-normal mb-2 tracking-wide">CONNECT</h2>
               <a
                 href="mailto:eudis.vah@gmail.com"
@@ -198,7 +199,8 @@ export default function ProjectsPage() {
                   <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} />
                 </a>
               </div>
-            </section>
+              </section>
+            </div>
           </div>
         </div>
       </div>
