@@ -53,7 +53,7 @@ export default function GalleryPage() {
                   alt={item.title}
                   width={400}
                   height={400}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             ))}
@@ -97,7 +97,7 @@ export default function GalleryPage() {
                     alt={item.title}
                     width={400}
                     height={400}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               ))}
