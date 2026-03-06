@@ -51,21 +51,10 @@ export default function GalleryPage() {
       {/* Desktop Layout - Hidden on mobile */}
       <div className="hidden md:flex h-screen overflow-hidden">
         {/* Left Side - Image */}
-        <div className="w-2/5 flex items-center justify-center p-12">
-          <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-400">
-            <Image 
-              src="/pfp.png" 
-              alt="Eudis Alvarez" 
-              width={600} 
-              height={800}
-              className="w-full h-full object-cover"
-              priority
-            />
-          </div>
-        </div>
+        
 
         {/* Right Side - Gallery Grid */}
-        <div className="w-3/5 px-12 py-8 flex flex-col overflow-hidden">
+        <div className="px-12 flex overflow-hidden flex-col w-full py-12">
           {/* Header Navigation */}
           <div className="flex items-center justify-between flex-shrink-0 mb-8">
             <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
