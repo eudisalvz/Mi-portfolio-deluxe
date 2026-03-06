@@ -86,17 +86,17 @@ export default function GalleryPage() {
 
           {/* Gallery Grid - 3 columns on desktop */}
           <div className="flex-1 overflow-y-auto">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-8">
               {galleryItems.map((item) => (
                 <div
                   key={item.id}
-                  className="aspect-square rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors cursor-pointer"
+                  className="aspect-[3/4] rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors cursor-pointer flex items-center justify-center"
                 >
                   <Image
                     src={item.image}
                     alt={item.title}
                     width={400}
-                    height={400}
+                    height={500}
                     className="w-full h-full object-contain"
                   />
                 </div>
