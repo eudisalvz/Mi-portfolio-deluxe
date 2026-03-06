@@ -4,11 +4,18 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-// Placeholder gallery items - will be replaced with actual images
-const galleryItems = Array(9).fill(null).map((_, i) => ({
-  id: i + 1,
-  title: `Project ${i + 1}`,
-}))
+// Gallery items with actual images
+const galleryItems = [
+  { id: 1, title: "Depends on the Weather", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img1-4pwEPrP4Fye3XAxyoxJjVv24JVZByJ.png" },
+  { id: 2, title: "TORQ App", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img2-XEXAcOwgoOU011eaAEhUNR7KVINZJW.png" },
+  { id: 3, title: "Decision Point Weather", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img3.png-f94UCChvljDsn7wqU4U8eKszMeCv7S.jpeg" },
+  { id: 4, title: "Decision Point Dashboard", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img4-beoRRr79sD8otTcEp00M7si3FbTURg.png" },
+  { id: 5, title: "Weather Maps", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img5.png-9w5YiZYePYDry7G3vY18kd0ZYNjEtx.jpeg" },
+  { id: 6, title: "TORQ Maps", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img6-ISyaTSyVyWfXdJbf3hGJV5uFJi37OR.png" },
+  { id: 7, title: "Weather Expertise", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img7.png-BXX0y82zqCjZbQlldJmUqoY7lfnopZ.jpeg" },
+  { id: 8, title: "Hospitality & Travel", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img8.png-PiENcA6omvHvpni4vCikmiRVy0cn0R.jpeg" },
+  { id: 9, title: "Member Profile", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/img9-AlljzVC40fWh2ch2dTM8HOdAiOt5kC.png" },
+]
 
 export default function GalleryPage() {
   const pathname = usePathname()
@@ -41,7 +48,13 @@ export default function GalleryPage() {
                 key={item.id}
                 className="aspect-square rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333]"
               >
-                {/* Placeholder */}
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
@@ -73,13 +86,19 @@ export default function GalleryPage() {
 
           {/* Gallery Grid - 3 columns on desktop */}
           <div className="flex-1 overflow-y-auto">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-6">
               {galleryItems.map((item) => (
                 <div
                   key={item.id}
-                  className="aspect-square rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333]"
+                  className="aspect-square rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors cursor-pointer"
                 >
-                  {/* Placeholder */}
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               ))}
             </div>
