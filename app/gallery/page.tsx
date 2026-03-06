@@ -53,7 +53,7 @@ export default function GalleryPage() {
                   alt={item.title}
                   width={400}
                   height={400}
-                  className="w-full h-full object-contain bg-background"
+                  className="w-full h-full object-contain bg-background border-background opacity-100 border-[19px]"
                 />
               </div>
             ))}
