@@ -90,7 +90,7 @@ export default function GalleryPage() {
               {galleryItems.map((item) => (
                 <div
                   key={item.id}
-                  className="aspect-[3/4] rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors cursor-pointer flex items-center justify-center"
+                  className="h-80 rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors cursor-pointer flex items-center justify-center p-4 bg-background border-primary-foreground"
                 >
                   <Image
                     src={item.image}
