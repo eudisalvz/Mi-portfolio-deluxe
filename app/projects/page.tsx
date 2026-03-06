@@ -120,14 +120,9 @@ export default function ProjectsPage() {
               <Link href="/" className={`text-xs tracking-wide transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 HOME
               </Link>
-              <a 
-                href="https://extended-branding-038566.framer.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}
-              >
+              <Link href="/gallery" className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 GALLERY
-              </a>
+              </Link>
               <Link href="/projects" className={`text-xs tracking-wide transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 PROJECTS
               </Link>
