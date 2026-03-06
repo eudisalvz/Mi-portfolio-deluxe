@@ -22,14 +22,9 @@ export default function PortfolioPage() {
             <p className="text-[#9e9e9e] text-xs mb-6">UI/UX DESIGNER</p>
 
             <div className="flex gap-4 mb-6">
-              <a
-                href="https://extended-branding-038566.framer.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors"
-              >
+              <Link href="/gallery" className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors">
                 GALLERY
-              </a>
+              </Link>
               <span className="text-[#9e9e9e] text-xs">—</span>
               <Link href="/projects" className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors">
                 PROJECTS
@@ -154,14 +149,9 @@ export default function PortfolioPage() {
               <Link href="/" className={`text-xs tracking-wide transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 HOME
               </Link>
-              <a 
-                href="https://extended-branding-038566.framer.app/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}
-              >
+              <Link href="/gallery" className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 GALLERY
-              </a>
+              </Link>
               <Link href="/projects" className={`text-xs tracking-wide transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 PROJECTS
               </Link>
