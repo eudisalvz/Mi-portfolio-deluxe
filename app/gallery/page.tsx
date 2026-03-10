@@ -25,8 +25,12 @@ export default function GalleryPage() {
       {/* Mobile Layout - Hidden on desktop */}
       <div className="md:hidden p-8">
         <div className="max-w-[400px]">
-          {/* Header */}
+          {/* Profile Section */}
           <div className="mb-12">
+            <div className="w-9 h-9 mb-6 rounded-lg overflow-hidden bg-white">
+              <Image src="/pfp.png" alt="Eudis Alvarez" width={36} height={36} className="w-full h-full object-cover" />
+            </div>
+
             <h1 className="text-xs font-normal mb-2 tracking-wide">EUDIS ALVAREZ</h1>
             <p className="text-[#9e9e9e] text-xs mb-6">UI/UX DESIGNER</p>
 
@@ -46,7 +50,7 @@ export default function GalleryPage() {
           </div>
 
           {/* Gallery Grid - 1 column on mobile */}
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-6 mb-12">
             {galleryItems.map((item) => (
               <div
                 key={item.id}
@@ -62,6 +66,56 @@ export default function GalleryPage() {
               </div>
             ))}
           </div>
+
+          {/* Connect Section */}
+          <section>
+            <h2 className="text-xs font-normal mb-4 tracking-wide">CONNECT</h2>
+            <a
+              href="mailto:eudis.vah@gmail.com"
+              className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors mb-6 block"
+            >
+              EUDIS.VAH@GMAIL.COM
+            </a>
+
+            <div className="flex gap-4">
+              <a
+                href="https://x.com/eudisalvz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                aria-label="X (Twitter)"
+              >
+                <Image src="/icons/x.svg" alt="X" width={16} height={16} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/eudis/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} />
+              </a>
+              <a
+                href="https://t.me/eudisalvz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                aria-label="Telegram"
+              >
+                <Image src="/icons/telegram.svg" alt="Telegram" width={16} height={16} />
+              </a>
+              <a
+                href="https://wa.me/message/52SBST7NINAPI1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                aria-label="WhatsApp"
+              >
+                <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} />
+              </a>
+            </div>
+          </section>
         </div>
       </div>
 
