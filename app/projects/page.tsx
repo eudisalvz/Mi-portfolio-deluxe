@@ -22,8 +22,15 @@ export default function ProjectsPage() {
       {/* Mobile Layout - Hidden on desktop */}
       <div className="md:hidden p-8">
         <div className="max-w-[400px]">
-          {/* Header Navigation */}
+          {/* Profile Section */}
           <div className="mb-12">
+            <div className="w-9 h-9 mb-6 rounded-lg overflow-hidden bg-white">
+              <Image src="/pfp.png" alt="Eudis Alvarez" width={36} height={36} className="w-full h-full object-cover" />
+            </div>
+
+            <h1 className="text-xs font-normal mb-2 tracking-wide">EUDIS ALVAREZ</h1>
+            <p className="text-[#9e9e9e] text-xs mb-6">UI/UX DESIGNER</p>
+
             <div className="flex gap-4 mb-6">
               <Link href="/" className={`text-xs underline transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
                 HOME
