@@ -22,12 +22,22 @@ export default function ProjectsPage() {
       {/* Mobile Layout - Hidden on desktop */}
       <div className="md:hidden p-8">
         <div className="max-w-[400px]">
-          {/* Back Button */}
-          <Link href="/" className="inline-flex mb-12 text-[#9e9e9e] hover:text-white transition-colors">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </Link>
+          {/* Header Navigation */}
+          <div className="mb-12">
+            <div className="flex gap-4 mb-6">
+              <Link href="/" className={`text-xs underline transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                HOME
+              </Link>
+              <span className="text-[#9e9e9e] text-xs">—</span>
+              <Link href="/gallery" className={`text-xs underline transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                GALLERY
+              </Link>
+              <span className="text-[#9e9e9e] text-xs">—</span>
+              <Link href="/projects" className={`text-xs underline transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                PROJECTS
+              </Link>
+            </div>
+          </div>
 
           {/* Projects Section */}
           <section className="mb-12">
