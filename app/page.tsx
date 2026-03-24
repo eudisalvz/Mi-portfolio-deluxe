@@ -168,7 +168,7 @@ export default function PortfolioPage() {
             <section className="flex-shrink-0">
               <h2 className="text-xs font-normal mb-2 tracking-wide">ABOUT</h2>
               <p className="text-[#9e9e9e] text-xs leading-tight max-w-lg">
-                I'M A WEB AND MOBILE APPS DESIGNER. I CARE ABOUT MAKING DIGITAL EXPERIENCES EASY, USEFUL, AND NICE TO LOOK AT.
+                {"I'M A UI/UX DESIGNER SPECIALIZING IN WEB AND MOBILE APPS. I CARE ABOUT MAKING DIGITAL EXPERIENCES EASY, USEFUL, AND NICE TO LOOK AT. WITH A LEGAL BACKGROUND, I BRING PRECISION AND CLARITY TO COMPLEX PRODUCT FLOWS.\n"}
               </p>
             </section>
 
