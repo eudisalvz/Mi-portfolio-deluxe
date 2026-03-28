@@ -31,7 +31,10 @@ export default function ProjectsPage() {
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm text-white">Open for work</span>
             </div>
-            <span className="text-sm text-[#9e9e9e]">1.2k</span>
+            <div className="flex items-center gap-2">
+              <Image src="/icons/bar-chart.svg" alt="Views" width={16} height={16} />
+              <span className="text-sm text-[#9e9e9e]">1.2k</span>
+            </div>
           </div>
 
           {/* Profile Section */}
