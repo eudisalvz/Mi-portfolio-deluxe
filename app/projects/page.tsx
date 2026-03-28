@@ -199,7 +199,7 @@ export default function ProjectsPage() {
               <section className="mb-8">
                 <h2 className="text-xs font-normal mb-2 tracking-wide">PROJECTS</h2>
                 <div className="space-y-2">
-                  {projects.map((project) => (
+                  {[...myProjects, ...clientProjects].map((project) => (
                     <div key={project.name} className="flex items-center justify-between max-w-lg">
                       <span className="text-[#9e9e9e] text-xs">{project.name}</span>
                       <div className="flex-1 mx-3 border-b border-dashed border-[#9e9e9e]"></div>
