@@ -58,7 +58,7 @@ export default function ProjectsPage() {
 
           {/* My projects Section */}
           <section className="mb-12">
-            <h2 className="text-sm font-semibold mb-4">My projects</h2>
+            <h2 className="text-sm mb-4 font-normal">My projects</h2>
             <div className="space-y-4">
               {myProjects.map((project) => (
                 <div key={project.name} className="flex items-center justify-between gap-3 group">
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
 
           {/* Projects for clients Section */}
           <section className="mb-12">
-            <h2 className="text-sm font-semibold mb-4">Projects for clients</h2>
+            <h2 className="text-sm mb-4 font-normal">Projects for clients</h2>
             <div className="space-y-4">
               {clientProjects.map((project) => (
                 <div key={project.name} className="flex items-center justify-between gap-3 group">
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
 
           {/* Connect Section */}
           <section>
-            <h2 className="text-sm font-semibold mb-3">Connect</h2>
+            <h2 className="text-sm mb-3 font-normal">Connect</h2>
             <a
               href="mailto:eudis.vah@gmail.com"
               className="text-[#9e9e9e] text-sm underline hover:text-white transition-colors mb-6 block"
