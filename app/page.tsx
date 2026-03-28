@@ -10,57 +10,64 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen text-white font-mono" style={{ backgroundColor: "#0a0a0a" }}>
       {/* Mobile Layout - Hidden on desktop */}
-      <div className="md:hidden p-8">
+      <div className="md:hidden p-8 font-sans">
         <div className="max-w-[400px]">
+          {/* Open for work badge */}
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm text-white">Open for work</span>
+            </div>
+            <span className="text-sm text-[#9e9e9e]">1.2k</span>
+          </div>
+
           {/* Profile Section */}
           <div className="mb-12">
-            <div className="w-9 h-9 mb-6 rounded-lg overflow-hidden bg-white">
-              <Image src="/pfp.png" alt="Eudis Alvarez" width={36} height={36} className="w-full h-full object-cover" />
+            <div className="w-10 h-10 mb-6 rounded-lg overflow-hidden bg-white">
+              <Image src="/pfp.png" alt="Eudis Alvarez" width={40} height={40} className="w-full h-full object-cover" />
             </div>
 
-            <h1 className="text-xs font-normal mb-2 tracking-wide">EUDIS ALVAREZ</h1>
-            <p className="text-[#9e9e9e] text-xs mb-6">UI/UX DESIGNER</p>
+            <h1 className="text-xl font-semibold mb-1">Eudis Alvarez</h1>
+            <p className="text-[#9e9e9e] text-sm mb-8">UI / UX Designer · Lawyer</p>
 
-            <div className="flex gap-4 mb-6">
-              <Link href="/" className={`text-xs underline transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                HOME
+            <div className="flex gap-4 mb-8">
+              <Link href="/" className={`text-sm underline transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Home
               </Link>
-              <span className="text-[#9e9e9e] text-xs">—</span>
-              <Link href="/gallery" className={`text-xs underline transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                GALLERY
+              <Link href="/gallery" className={`text-sm underline transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Portfolio
               </Link>
-              <span className="text-[#9e9e9e] text-xs">—</span>
-              <Link href="/projects" className={`text-xs underline transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                PROJECTS
+              <Link href="/projects" className={`text-sm underline transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Projects
               </Link>
             </div>
           </div>
 
           {/* About Section */}
           <section className="mb-12">
-            <h2 className="text-xs font-normal mb-4 tracking-wide">ABOUT</h2>
-            <p className="text-[#9e9e9e] text-xs leading-relaxed">
-              {"UI/UX DESIGNER WITH A LEGAL BACKGROUND. I TURN COMPLEX WORKFLOWS INTO SIMPLE, INTUITIVE EXPERIENCES.\n\n"}
+            <h2 className="text-sm font-semibold mb-3">About</h2>
+            <p className="text-[#9e9e9e] text-sm leading-relaxed">
+              UI/UX Designer with a legal background. I turn complex workflows into simple, intuitive experiences.
             </p>
           </section>
 
           {/* Interests Section */}
           <section className="mb-12">
-            <h2 className="text-xs font-normal mb-4 tracking-wide">INTERESTS</h2>
-            <p className="text-[#9e9e9e] text-xs">GYM, PHOTOGRAPHY, TECH AND GAMING.</p>
+            <h2 className="text-sm font-semibold mb-3">interests</h2>
+            <p className="text-[#9e9e9e] text-sm">Gym, photography, tech and gaming.</p>
           </section>
 
           {/* Crafting Section */}
           <section className="mb-12">
-            <h2 className="text-xs font-normal mb-4 tracking-wide">CRAFTING</h2>
-            <div className="space-y-4">
+            <h2 className="text-sm font-semibold mb-3">Crafting</h2>
+            <div className="space-y-3">
               <a
                 href="https://www.cardverse.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
               >
-                <span className="text-xs">CARDVERSE</span>
+                <span className="text-sm">Cardverse</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
               <a
@@ -69,7 +76,7 @@ export default function PortfolioPage() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-between text-[#9e9e9e] hover:text-white transition-colors group"
               >
-                <span className="text-xs">ALAMO ALGORITHMICS</span>
+                <span className="text-sm">Alamo Algorithmics</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
@@ -77,50 +84,54 @@ export default function PortfolioPage() {
 
           {/* Connect Section */}
           <section>
-            <h2 className="text-xs font-normal mb-4 tracking-wide">CONNECT</h2>
+            <h2 className="text-sm font-semibold mb-3">Connect</h2>
             <a
               href="mailto:eudis.vah@gmail.com"
-              className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors mb-6 block"
+              className="text-[#9e9e9e] text-sm underline hover:text-white transition-colors mb-6 block"
             >
-              EUDIS.VAH@GMAIL.COM
+              eudis.vah@gmail.com
             </a>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center">
               <a
                 href="https://x.com/eudisalvz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
                 aria-label="X (Twitter)"
               >
                 <Image src="/icons/x.svg" alt="X" width={16} height={16} />
+                <span className="text-sm">124</span>
+              </a>
+              <a
+                href="https://www.tiktok.com/@eudisalvz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                aria-label="TikTok"
+              >
+                <Image src="/icons/tiktok.svg" alt="TikTok" width={16} height={16} />
+                <span className="text-sm">1015</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/eudis/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} />
+                <span className="text-sm">19</span>
               </a>
               <a
-                href="https://t.me/eudisalvz"
+                href="https://www.instagram.com/eudisalvz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                aria-label="Telegram"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                aria-label="Instagram"
               >
-                <Image src="/icons/telegram.svg" alt="Telegram" width={16} height={16} />
-              </a>
-              <a
-                href="https://wa.me/message/52SBST7NINAPI1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                aria-label="WhatsApp"
-              >
-                <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} />
+                <Image src="/icons/instagram.svg" alt="Instagram" width={16} height={16} />
+                <span className="text-sm">828</span>
               </a>
             </div>
           </section>
