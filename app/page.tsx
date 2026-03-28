@@ -27,7 +27,7 @@ export default function PortfolioPage() {
               <Image src="/pfp.png" alt="Eudis Alvarez" width={40} height={40} className="w-full h-full object-cover" />
             </div>
 
-            <h1 className="text-xl font-semibold mb-1">Eudis Alvarez</h1>
+            <h1 className="mb-1 text-base font-medium">Eudis Alvarez</h1>
             <p className="text-[#9e9e9e] text-sm mb-8">UI / UX Designer · Lawyer</p>
 
             <div className="flex gap-4 mb-8">
