@@ -40,7 +40,7 @@ export default function ProjectsPage() {
               <Image src="/pfp.png" alt="Eudis Alvarez" width={40} height={40} className="w-full h-full object-cover" />
             </div>
 
-            <h1 className="text-xl font-semibold mb-1">Eudis Alvarez</h1>
+            <h1 className="mb-1 text-base font-medium">Eudis Alvarez</h1>
             <p className="text-[#9e9e9e] text-sm mb-8">UI / UX Designer · Lawyer</p>
 
             <div className="flex gap-4 mb-8">
@@ -62,7 +62,7 @@ export default function ProjectsPage() {
             <div className="space-y-4">
               {myProjects.map((project) => (
                 <div key={project.name} className="flex items-center justify-between gap-3 group">
-                  <span className="text-white text-sm">{project.name}</span>
+                  <span className="text-sm text-muted-foreground">{project.name}</span>
                   <div className="flex items-center gap-3 flex-1">
                     <span className="text-[#9e9e9e] text-sm border rounded-[5px] py-0 px-1.5 border-0 bg-primary-foreground">{project.type}</span>
                     <span className="text-[#9e9e9e] text-sm border rounded-[5px] py-0 px-1.5 border-0 bg-primary-foreground">{project.year}</span>
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
             <div className="space-y-4">
               {clientProjects.map((project) => (
                 <div key={project.name} className="flex items-center justify-between gap-3 group">
-                  <span className="text-white text-sm">{project.name}</span>
+                  <span className="text-sm text-muted-foreground">{project.name}</span>
                   <div className="flex items-center gap-3 flex-1">
                     <span className="text-[#9e9e9e] text-sm border rounded-[5px] py-0 px-1.5 border-0 bg-primary-foreground">{project.type}</span>
                     <span className="text-[#9e9e9e] text-sm rounded-[5px] py-0 px-1.5 border-0 bg-primary-foreground">{project.year}</span>
