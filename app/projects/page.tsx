@@ -64,8 +64,8 @@ export default function ProjectsPage() {
                 <div key={project.name} className="flex items-center justify-between gap-3 group">
                   <span className="text-white text-sm">{project.name}</span>
                   <div className="flex items-center gap-3 flex-1">
-                    <span className="text-[#9e9e9e] text-sm">{project.type}</span>
-                    <span className="text-[#9e9e9e] text-sm">{project.year}</span>
+                    <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.type}</span>
+                    <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.year}</span>
                   </div>
                   <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -83,8 +83,8 @@ export default function ProjectsPage() {
                 <div key={project.name} className="flex items-center justify-between gap-3 group">
                   <span className="text-white text-sm">{project.name}</span>
                   <div className="flex items-center gap-3 flex-1">
-                    <span className="text-[#9e9e9e] text-sm">{project.type}</span>
-                    <span className="text-[#9e9e9e] text-sm">{project.year}</span>
+                    <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.type}</span>
+                    <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.year}</span>
                   </div>
                   <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
