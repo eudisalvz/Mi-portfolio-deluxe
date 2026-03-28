@@ -61,17 +61,13 @@ export default function ProjectsPage() {
             <h2 className="text-sm font-semibold mb-4">My projects</h2>
             <div className="space-y-4">
               {myProjects.map((project) => (
-                <div key={project.name} className="flex items-center justify-between group">
-                  <div className="flex-1">
-                    <p className="text-[#9e9e9e] text-sm">
-                      <span className="text-white">{project.name}</span>
-                      <span className="mx-1.5">·</span>
-                      <span>{project.type}</span>
-                      <span className="mx-1.5">·</span>
-                      <span>{project.year}</span>
-                    </p>
+                <div key={project.name} className="flex items-center justify-between gap-3 group">
+                  <span className="text-white text-sm">{project.name}</span>
+                  <div className="flex items-center gap-3 flex-1">
+                    <span className="text-[#9e9e9e] text-sm">{project.type}</span>
+                    <span className="text-[#9e9e9e] text-sm">{project.year}</span>
                   </div>
-                  <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
@@ -84,17 +80,13 @@ export default function ProjectsPage() {
             <h2 className="text-sm font-semibold mb-4">Projects for clients</h2>
             <div className="space-y-4">
               {clientProjects.map((project) => (
-                <div key={project.name} className="flex items-center justify-between group">
-                  <div className="flex-1">
-                    <p className="text-[#9e9e9e] text-sm">
-                      <span className="text-white">{project.name}</span>
-                      <span className="mx-1.5">·</span>
-                      <span>{project.type}</span>
-                      <span className="mx-1.5">·</span>
-                      <span>{project.year}</span>
-                    </p>
+                <div key={project.name} className="flex items-center justify-between gap-3 group">
+                  <span className="text-white text-sm">{project.name}</span>
+                  <div className="flex items-center gap-3 flex-1">
+                    <span className="text-[#9e9e9e] text-sm">{project.type}</span>
+                    <span className="text-[#9e9e9e] text-sm">{project.year}</span>
                   </div>
-                  <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
