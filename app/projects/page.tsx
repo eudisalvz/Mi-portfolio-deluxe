@@ -4,14 +4,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-const projects = [
-  { name: "CARDVERSE", year: "2025" },
-  { name: "ALAMO ALGORITHMICS", year: "2025" },
-  { name: "DEPENDS ON THE WEATHER", year: "2025" },
-  { name: "MASTER PERFUMES", year: "2025" },
-  { name: "DECISION POINT WEATHER", year: "2025" },
-  { name: "TORQ APP", year: "2024" },
-  { name: "MIGHTY SHIELD INSURANCE", year: "2024" },
+const myProjects = [
+  { name: "Cardverse", type: "App", year: "Q2 2026" },
+  { name: "Alamo Algorithmics", type: "Dev-Des Agency", year: "2024" },
+]
+
+const clientProjects = [
+  { name: "Depends On The Weather", type: "App", year: "2025" },
+  { name: "Master Perfumes", type: "Ecommerce", year: "2025" },
+  { name: "Decision Point Weather", type: "SaaS", year: "2025" },
+  { name: "Torq app", type: "App", year: "2024" },
+  { name: "Mighty shield insurance", type: "Web page", year: "2024" },
 ]
 
 export default function ProjectsPage() {
@@ -55,15 +58,22 @@ export default function ProjectsPage() {
 
           {/* My projects Section */}
           <section className="mb-12">
-            <h2 className="text-sm font-semibold mb-3">My projects</h2>
-            <div className="space-y-3">
-              {projects.slice(0, 3).map((project) => (
-                <div key={project.name} className="flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="text-white text-sm">{project.name}</span>
-                    <span className="text-[#9e9e9e] text-xs">{project.year}</span>
+            <h2 className="text-sm font-semibold mb-4">My projects</h2>
+            <div className="space-y-4">
+              {myProjects.map((project) => (
+                <div key={project.name} className="flex items-center justify-between group">
+                  <div className="flex-1">
+                    <p className="text-[#9e9e9e] text-sm">
+                      <span className="text-white">{project.name}</span>
+                      <span className="mx-1.5">·</span>
+                      <span>{project.type}</span>
+                      <span className="mx-1.5">·</span>
+                      <span>{project.year}</span>
+                    </p>
                   </div>
-                  <span className="text-[#9e9e9e] text-xs">App</span>
+                  <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
               ))}
             </div>
@@ -71,15 +81,22 @@ export default function ProjectsPage() {
 
           {/* Projects for clients Section */}
           <section className="mb-12">
-            <h2 className="text-sm font-semibold mb-3">Projects for clients</h2>
-            <div className="space-y-3">
-              {projects.slice(3).map((project) => (
-                <div key={project.name} className="flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="text-white text-sm">{project.name}</span>
-                    <span className="text-[#9e9e9e] text-xs">{project.year}</span>
+            <h2 className="text-sm font-semibold mb-4">Projects for clients</h2>
+            <div className="space-y-4">
+              {clientProjects.map((project) => (
+                <div key={project.name} className="flex items-center justify-between group">
+                  <div className="flex-1">
+                    <p className="text-[#9e9e9e] text-sm">
+                      <span className="text-white">{project.name}</span>
+                      <span className="mx-1.5">·</span>
+                      <span>{project.type}</span>
+                      <span className="mx-1.5">·</span>
+                      <span>{project.year}</span>
+                    </p>
                   </div>
-                  <span className="text-[#9e9e9e] text-xs">SaaS</span>
+                  <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
               ))}
             </div>
