@@ -21,30 +21,40 @@ export default function GalleryPage() {
   const pathname = usePathname()
 
   return (
-    <div className="min-h-screen text-white font-mono" style={{ backgroundColor: "#0a0a0a" }}>
+    <div className="min-h-screen text-white font-sans" style={{ backgroundColor: "#0a0a0a" }}>
       {/* Mobile Layout - Hidden on desktop */}
       <div className="md:hidden p-8">
         <div className="max-w-[400px]">
+          {/* Open for work badge */}
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm text-white">Open for work</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Image src="/icons/bar-chart.svg" alt="Views" width={16} height={16} />
+              <span className="text-sm text-[#9e9e9e]">1.2k</span>
+            </div>
+          </div>
+
           {/* Profile Section */}
           <div className="mb-12">
-            <div className="w-9 h-9 mb-6 rounded-lg overflow-hidden bg-white">
-              <Image src="/pfp.png" alt="Eudis Alvarez" width={36} height={36} className="w-full h-full object-cover" />
+            <div className="w-10 h-10 mb-6 rounded-lg overflow-hidden bg-white">
+              <Image src="/pfp.png" alt="Eudis Alvarez" width={40} height={40} className="w-full h-full object-cover" />
             </div>
 
-            <h1 className="text-xs font-normal mb-2 tracking-wide">EUDIS ALVAREZ</h1>
-            <p className="text-[#9e9e9e] text-xs mb-6">UI/UX DESIGNER</p>
+            <h1 className="mb-1 font-medium text-base">Eudis Alvarez</h1>
+            <p className="text-[#9e9e9e] text-sm mb-8">UI / UX Designer · Lawyer</p>
 
-            <div className="flex gap-4 mb-6">
-              <Link href="/" className={`text-xs underline transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                HOME
+            <div className="flex gap-4 mb-8">
+              <Link href="/" className={`text-sm underline transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Home
               </Link>
-              <span className="text-[#9e9e9e] text-xs">—</span>
-              <Link href="/gallery" className={`text-xs underline transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                GALLERY
+              <Link href="/gallery" className={`text-sm underline transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Portfolio
               </Link>
-              <span className="text-[#9e9e9e] text-xs">—</span>
-              <Link href="/projects" className={`text-xs underline transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                PROJECTS
+              <Link href="/projects" className={`text-sm underline transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Projects
               </Link>
             </div>
           </div>
@@ -54,14 +64,14 @@ export default function GalleryPage() {
             {galleryItems.map((item) => (
               <div
                 key={item.id}
-                className="aspect-square rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333]"
+                className="h-80 rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors flex items-center justify-center p-4 bg-background"
               >
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={400}
-                  height={400}
-                  className="w-full h-full object-contain bg-background border-background opacity-100 border-[19px]"
+                  height={500}
+                  className="w-full h-full object-contain"
                 />
               </div>
             ))}
@@ -69,50 +79,54 @@ export default function GalleryPage() {
 
           {/* Connect Section */}
           <section>
-            <h2 className="text-xs font-normal mb-4 tracking-wide">CONNECT</h2>
+            <h2 className="text-sm font-semibold mb-3">Connect</h2>
             <a
               href="mailto:eudis.vah@gmail.com"
-              className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors mb-6 block"
+              className="text-[#9e9e9e] text-sm underline hover:text-white transition-colors mb-6 block"
             >
-              EUDIS.VAH@GMAIL.COM
+              eudis.vah@gmail.com
             </a>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center">
               <a
                 href="https://x.com/eudisalvz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
                 aria-label="X (Twitter)"
               >
                 <Image src="/icons/x.svg" alt="X" width={16} height={16} />
+                <span className="text-sm">124</span>
+              </a>
+              <a
+                href="https://www.tiktok.com/@eudisalvz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                aria-label="TikTok"
+              >
+                <Image src="/icons/tiktok.svg" alt="TikTok" width={16} height={16} />
+                <span className="text-sm">1015</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/eudis/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} />
+                <span className="text-sm">19</span>
               </a>
               <a
-                href="https://t.me/eudisalvz"
+                href="https://www.instagram.com/eudisalvz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                aria-label="Telegram"
+                className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                aria-label="Instagram"
               >
-                <Image src="/icons/telegram.svg" alt="Telegram" width={16} height={16} />
-              </a>
-              <a
-                href="https://wa.me/message/52SBST7NINAPI1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                aria-label="WhatsApp"
-              >
-                <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} />
+                <Image src="/icons/instagram.svg" alt="Instagram" width={16} height={16} />
+                <span className="text-sm">828</span>
               </a>
             </div>
           </section>
@@ -120,7 +134,7 @@ export default function GalleryPage() {
       </div>
 
       {/* Desktop Layout - Hidden on mobile */}
-      <div className="hidden md:flex h-screen overflow-hidden">
+      <div className="hidden md:flex h-screen overflow-hidden font-sans">
         {/* Left Side - Image */}
         
 
@@ -128,16 +142,19 @@ export default function GalleryPage() {
         <div className="px-12 flex overflow-hidden flex-col w-full py-12">
           {/* Header Navigation */}
           <div className="flex items-center justify-between flex-shrink-0 mb-8">
-            <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
+            <div>
+              <h1 className="font-semibold text-base">Eudis Alvarez</h1>
+              <p className="text-[#9e9e9e] text-sm mt-1">UI / UX Designer · Lawyer</p>
+            </div>
             <nav className="flex gap-8">
-              <Link href="/" className={`text-xs tracking-wide transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                HOME
+              <Link href="/" className={`text-sm transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Home
               </Link>
-              <Link href="/gallery" className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                GALLERY
+              <Link href="/gallery" className={`text-sm transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Portfolio
               </Link>
-              <Link href="/projects" className={`text-xs tracking-wide transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                PROJECTS
+              <Link href="/projects" className={`text-sm transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Projects
               </Link>
             </nav>
           </div>
