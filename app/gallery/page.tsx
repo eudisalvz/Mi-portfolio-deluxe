@@ -64,7 +64,7 @@ export default function GalleryPage() {
             {galleryItems.map((item) => (
               <div
                 key={item.id}
-                className="h-80 rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors flex items-center justify-center p-4"
+                className="h-80 rounded-lg overflow-hidden bg-[#1a1a1a] border border-[#333333] hover:border-white transition-colors flex items-center justify-center p-4 bg-background"
               >
                 <Image
                   src={item.image}
