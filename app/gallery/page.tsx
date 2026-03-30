@@ -134,7 +134,7 @@ export default function GalleryPage() {
       </div>
 
       {/* Desktop Layout - Hidden on mobile */}
-      <div className="hidden md:flex h-screen overflow-hidden">
+      <div className="hidden md:flex h-screen overflow-hidden font-sans">
         {/* Left Side - Image */}
         
 
@@ -142,16 +142,19 @@ export default function GalleryPage() {
         <div className="px-12 flex overflow-hidden flex-col w-full py-12">
           {/* Header Navigation */}
           <div className="flex items-center justify-between flex-shrink-0 mb-8">
-            <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
+            <div>
+              <h1 className="text-2xl font-semibold">Eudis Alvarez</h1>
+              <p className="text-[#9e9e9e] text-sm mt-1">UI / UX Designer · Lawyer</p>
+            </div>
             <nav className="flex gap-8">
-              <Link href="/" className={`text-xs tracking-wide transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                HOME
+              <Link href="/" className={`text-sm transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Home
               </Link>
-              <Link href="/gallery" className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                GALLERY
+              <Link href="/gallery" className={`text-sm transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Portfolio
               </Link>
-              <Link href="/projects" className={`text-xs tracking-wide transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                PROJECTS
+              <Link href="/projects" className={`text-sm transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Projects
               </Link>
             </nav>
           </div>

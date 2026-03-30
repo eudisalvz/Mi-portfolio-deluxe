@@ -154,7 +154,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* Desktop Layout - Hidden on mobile */}
-      <div className="hidden md:flex h-screen overflow-hidden">
+      <div className="hidden md:flex h-screen overflow-hidden font-sans">
         {/* Left Side - Image */}
         <div className="w-2/5 flex items-center justify-center p-12">
           <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-400">
@@ -172,17 +172,20 @@ export default function ProjectsPage() {
         {/* Right Side - Content */}
         <div className="w-3/5 px-12 flex flex-col justify-end overflow-hidden py-12">
           {/* Header Navigation */}
-          <div className="flex items-center justify-between flex-shrink-0">
-            <h1 className="text-xs font-normal tracking-wide">EUDIS ALVAREZ</h1>
+          <div className="flex items-center justify-between flex-shrink-0 mb-12">
+            <div>
+              <h1 className="text-2xl font-semibold">Eudis Alvarez</h1>
+              <p className="text-[#9e9e9e] text-sm mt-1">UI / UX Designer · Lawyer</p>
+            </div>
             <nav className="flex gap-8">
-              <Link href="/" className={`text-xs tracking-wide transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                HOME
+              <Link href="/" className={`text-sm transition-colors ${pathname === "/" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Home
               </Link>
-              <Link href="/gallery" className={`text-xs tracking-wide transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                GALLERY
+              <Link href="/gallery" className={`text-sm transition-colors ${pathname === "/gallery" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Portfolio
               </Link>
-              <Link href="/projects" className={`text-xs tracking-wide transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
-                PROJECTS
+              <Link href="/projects" className={`text-sm transition-colors ${pathname === "/projects" ? "text-white" : "text-[#9e9e9e] hover:text-white"}`}>
+                Projects
               </Link>
             </nav>
           </div>
@@ -192,13 +195,37 @@ export default function ProjectsPage() {
             <div className="text-left flex-shrink-0">
               {/* Projects Section */}
               <section className="mb-8">
-                <h2 className="text-xs font-normal mb-2 tracking-wide">PROJECTS</h2>
-                <div className="space-y-2">
-                  {[...myProjects, ...clientProjects].map((project) => (
-                    <div key={project.name} className="flex items-center justify-between max-w-lg">
-                      <span className="text-[#9e9e9e] text-xs">{project.name}</span>
-                      <div className="flex-1 mx-3 border-b border-dashed border-[#9e9e9e]"></div>
-                      <span className="text-[#9e9e9e] text-xs whitespace-nowrap">{project.year}</span>
+                <h2 className="text-sm font-semibold mb-3">My projects</h2>
+                <div className="space-y-3">
+                  {myProjects.map((project) => (
+                    <div key={project.name} className="flex items-center justify-between max-w-lg gap-3 group">
+                      <span className="text-white text-sm">{project.name}</span>
+                      <div className="flex items-center gap-3 flex-1">
+                        <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.type}</span>
+                        <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.year}</span>
+                      </div>
+                      <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* Projects for clients Section */}
+              <section className="mb-8">
+                <h2 className="text-sm font-semibold mb-3">Projects for clients</h2>
+                <div className="space-y-3">
+                  {clientProjects.map((project) => (
+                    <div key={project.name} className="flex items-center justify-between max-w-lg gap-3 group">
+                      <span className="text-white text-sm">{project.name}</span>
+                      <div className="flex items-center gap-3 flex-1">
+                        <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.type}</span>
+                        <span className="text-[#9e9e9e] text-sm border border-[#333333] rounded-[5px] px-2.5 py-1">{project.year}</span>
+                      </div>
+                      <svg className="w-4 h-4 text-[#9e9e9e] group-hover:text-white transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
                     </div>
                   ))}
                 </div>
@@ -206,52 +233,56 @@ export default function ProjectsPage() {
 
               {/* Connect Section */}
               <section className="flex-shrink-0">
-              <h2 className="text-xs font-normal mb-2 tracking-wide">CONNECT</h2>
-              <a
-                href="mailto:eudis.vah@gmail.com"
-                className="text-[#9e9e9e] text-xs underline hover:text-white transition-colors mb-3 block"
-              >
-                EUDIS.VAH@GMAIL.COM
-              </a>
+                <h2 className="text-sm font-semibold mb-2">Connect</h2>
+                <a
+                  href="mailto:eudis.vah@gmail.com"
+                  className="text-[#9e9e9e] text-sm underline hover:text-white transition-colors mb-3 block"
+                >
+                  eudis.vah@gmail.com
+                </a>
 
-              <div className="flex gap-3">
-                <a
-                  href="https://x.com/eudisalvz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                  aria-label="X (Twitter)"
-                >
-                  <Image src="/icons/x.svg" alt="X" width={16} height={16} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/eudis/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} />
-                </a>
-                <a
-                  href="https://t.me/eudisalvz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                  aria-label="Telegram"
-                >
-                  <Image src="/icons/telegram.svg" alt="Telegram" width={16} height={16} />
-                </a>
-                <a
-                  href="https://wa.me/message/52SBST7NINAPI1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-[26px] h-[26px] rounded-lg border border-[#9e9e9e] flex items-center justify-center hover:border-white transition-colors"
-                  aria-label="WhatsApp"
-                >
-                  <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={16} height={16} />
-                </a>
-              </div>
+                <div className="flex gap-4 items-center">
+                  <a
+                    href="https://x.com/eudisalvz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                    aria-label="X (Twitter)"
+                  >
+                    <Image src="/icons/x.svg" alt="X" width={16} height={16} />
+                    <span className="text-sm">124</span>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@eudisalvz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                    aria-label="TikTok"
+                  >
+                    <Image src="/icons/tiktok.svg" alt="TikTok" width={16} height={16} />
+                    <span className="text-sm">1015</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/eudis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} />
+                    <span className="text-sm">19</span>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/eudisalvz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[#9e9e9e] hover:text-white transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Image src="/icons/instagram.svg" alt="Instagram" width={16} height={16} />
+                    <span className="text-sm">828</span>
+                  </a>
+                </div>
               </section>
             </div>
           </div>
