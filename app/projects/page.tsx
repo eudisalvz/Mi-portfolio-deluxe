@@ -199,7 +199,7 @@ export default function ProjectsPage() {
                 <div className="space-y-3">
                   {myProjects.map((project) => (
                     <div key={project.name} className="flex items-center justify-between max-w-lg gap-3 group">
-                      <span className="text-white text-sm">{project.name}</span>
+                      <span className="text-sm text-muted-foreground">{project.name}</span>
                       <div className="flex items-center gap-3 flex-1">
                         <span className="text-[#9e9e9e] text-sm border rounded-[5px] border-0 bg-primary-foreground px-1.5 py-0">{project.type}</span>
                         <span className="text-[#9e9e9e] text-sm border rounded-[5px] border-0 bg-primary-foreground px-1.5 py-0">{project.year}</span>
@@ -218,7 +218,7 @@ export default function ProjectsPage() {
                 <div className="space-y-3">
                   {clientProjects.map((project) => (
                     <div key={project.name} className="flex items-center justify-between max-w-lg gap-3 group">
-                      <span className="text-white text-sm">{project.name}</span>
+                      <span className="text-sm text-muted-foreground">{project.name}</span>
                       <div className="flex items-center gap-3 flex-1">
                         <span className="text-[#9e9e9e] text-sm border rounded-[5px] border-0 bg-primary-foreground px-1.5 py-0">{project.type}</span>
                         <span className="text-[#9e9e9e] text-sm border rounded-[5px] border-0 bg-primary-foreground px-1.5 py-0">{project.year}</span>
