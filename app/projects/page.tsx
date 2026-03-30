@@ -174,7 +174,7 @@ export default function ProjectsPage() {
           {/* Header Navigation */}
           <div className="flex items-center justify-between flex-shrink-0 mb-12">
             <div>
-              <h1 className="text-2xl font-semibold">Eudis Alvarez</h1>
+              <h1 className="font-semibold text-base">Eudis Alvarez</h1>
               <p className="text-[#9e9e9e] text-sm mt-1">UI / UX Designer · Lawyer</p>
             </div>
             <nav className="flex gap-8">
